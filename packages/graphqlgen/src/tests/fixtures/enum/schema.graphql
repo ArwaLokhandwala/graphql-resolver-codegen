@@ -1,0 +1,15 @@
+type User {
+  id: ID!
+  name: String!
+  type: UserType!
+}
+
+enum UserType {
+  ADMIN
+  EDITOR
+  COLLABORATOR
+}
+
+type Query {
+  createUser(name: String!, type: UserType!): User
+}
